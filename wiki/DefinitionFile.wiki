@@ -1,8 +1,8 @@
-Repres
+Repres(Representation)
 
-Which sort of word types are variables and which words are equivalent?
+Which sort of word types are a sort of variable (things, what, something, and other abstract words) and which words are equivalent?
 
-Ops
+Ops(Operators)
 
 Special cases of words which correspond to logical operators, for example "or" and "and" (may not exist in such a pure form in all natural languages).
 
