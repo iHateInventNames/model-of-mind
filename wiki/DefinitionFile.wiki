@@ -36,4 +36,4 @@ Here you can define Python functions called by the optional command argument of 
 Note
 
 Most of the definition file is also trainable by simply chatting to the AI,
-but sometimes a adjustment of the deffile is needed. (For example if you want to define custom algorithms)
+but sometimes a adjustment of the deffile is needed. (For example if you want to define custom algorithms or the system understood a synonymity wrong)
