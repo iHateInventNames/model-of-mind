@@ -18,8 +18,7 @@ Special cases of words which correspond to logical operators, for example "or" a
 
 Rules
 
-They are only important if you really know what you are doing,
-by default the system generates them when it hears synonymous sentences,
+By default the system generates them when it hears synonymous sentences,
 it tries to reduce new grammatical structures to a combination of known ones,
 Rules describes the mapping between grammatical structures and logical meaning (with an optional command argument).
 
