@@ -6,11 +6,7 @@ Sentences
 
 The place for knowledge in language form.
 
-Misc (Advanced stuff)
-
-Axioms
-
-Here you can define additional FOL axioms to the included ones in MOM0.1.py's BaseAxioms.
+-------------- Advanced stuff --------------
 
 Repres(Representation)
 
@@ -26,6 +22,12 @@ They are only important if you really know what you are doing,
 by default the system generates them when it hears synonymous sentences,
 it tries to reduce new grammatical structures to a combination of known ones,
 Rules describes the mapping between grammatical structures and logical meaning (with an optional command argument).
+
+----- Profi stuff (can change the behavior of the system fundamentally) -------
+
+Axioms
+
+Here you can define additional axioms of thought (FOL) to the included ones in MOM0.1.py BaseAxioms.
 
 CustomCode
 
