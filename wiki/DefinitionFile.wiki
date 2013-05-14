@@ -1,6 +1,6 @@
 Repres(Representation)
 
-Which sort of word types are a sort of variable (things, what, something, and other abstract words) and which words are equivalent?
+Which word types are a sort of variable (things, what, something, and other abstract words) and which words are equivalent?
 
 Ops(Operators)
 
