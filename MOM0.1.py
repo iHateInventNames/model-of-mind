@@ -14,6 +14,7 @@ len(A,B,T) :- Li<-A, len(Li,B,T).
 do(A,B,C,T,P) :- mem(A,Z,T), do(Z,B,C,T,P).
 iss(A,B,T,P) :- mem(A,B,T).
 iss(A,B,T,P) :- mem(A,Z,T), mem(Z,B,T).
+doestimes(X,Action,B,Times,T) :- S<-[TimesW|(mem(W,X,T),doestimes(W,Action,B,TimesW,T))],sumlist(S,Sum),Times is Sum,Times\==0.
 doestimes(X,Action,B,Times,T) :- W<-[K|(mem(K,B,T),do(X,Action,K,T,P))],length(W,Times),Times\==0.
 doestimes(X1,Action1,B1,Z,T) :- current_predicate(doestimesxmorethan/8), doestimesxmorethan(X1,Action1,B1,More,X2,Action2,B2,T), doestimes(X2,Action2,B2,Times2,T),Z is Times2+More.
 doestimesmorethan(A,Action,B,X,Bction2,Y,T) :- doestimes(A,Action,B,N,T), doestimes(X,Bction2,Y,M,T), N>M.
@@ -24,7 +25,7 @@ plan(A,V,B,T,N,Path):-call_with_depth_limit((V=is,iss(A,B,T,P);do(A,V,B,T,P2)),N
 
 def Question(a,syntax,ret,bOtherQuestion,bWhen,bWhy,bHowMany,bWhat,bHow,bPlan,MaxResults=100,MaxDepth=100):
 	rs=Popen('swipl -q -f MOM_pl.pl', shell=True, stdin=PIPE, stdout=PIPE, stderr=STDOUT).communicate("leash(-all),"+
-	("trace," if not bPlan else "")+ret.split("A")[1]+"."+(("\n;".join("" for z in range(MaxResults))) if bHow==False and bPlan==False else ""))[0]
+	("trace," if not bPlan else "")+ret.split("A")[1]+"."+(("\n;".join("" for z in range(MaxResults))) if bHow==False and bPlan==False else ""))[0].replace("\r","")
 	ReasWHEN=set([]); ReasWHY=set([]); Ansli=set([]); M=["Call:","Fail:","Exit:","Redo:"]
 	for l in M: rs=rs.replace(l,"\n"+l)
 	for a in rs.split("\n"): #read the proof, succeeded goals in the reason predicate list are reasons, in answer mode add answers
